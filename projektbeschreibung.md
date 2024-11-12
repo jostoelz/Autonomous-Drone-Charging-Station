@@ -1,16 +1,7 @@
 # Abstract  
 In diesem Projekt baue ich eine automatische Ladungssation für Drohnen. Sobald die Drohne vom Pilot auf einer Plattform gelandet wurde, setzt ein Mechanismus für das Laden der Drohne ein. Wenn das Laden abgeschlossen ist, ist die Drohne wieder abflugbereit.
 # Projekt im Detail
-Der Pilot landet auf einer Landeplattform. Dann erfolgt das Szenario entweder von Variante 1 oder 2:
-
-Variante 1:
-* Eine vertikale und eine horizontale Wand bewegen die Drohne so weit, bis die wireless charging-Bauteile ungefähr übereinander liegen. Dafür verfügt sowohl die Landeplattform als auch die Drohe über Sensoren.
-
-Variante 2:
-* Der Pilot fliegt in eine Ecke. Diese ist von zwei Wänden umgeben. So liegen die wireless charging-Bauteile automatisch ungefähr übereinander.
-
-Das wireless charging funktioniert im gleichen Stil wie Magsafe. 
-Wenn die wireless charging-Bauteile übereinander liegen, se
+Der Pilot landet auf einer Landeplattform. Unterhalb der Landeplattform und unterhalb der Drohne ist jeweils eine Spule angebracht. Gleichstrom von einer Stromquelle fliesst zur Spule an der Landeplattform und führt dazu, dass eine Anziehungskraft zwischen den zwei Spulen entsteht. Dies ermöglicht, dass die Spulen automatisch übereinander liegen. Sobald die Positionierung geschehen ist, fliesst Wechselstrom zur Spule an der Landeplattform. Dieser Wechselstrom erzeugt ein sich ständig änderndes Magnetfeld. Durch die elektromagnetische Induktion kann die Spule an der Drohne Strom herzustellen. Der Strom fliesst dann von der Spule in den Akku der Drohne (verbundenes Kabel). Schlussendlich kann die Drohne wieder abheben.
 ## Muss
 * Die Drohne muss auf einer Plattform landen können.
 * Die Drohne wird in die richtige Position gebracht, um mit wireless charging geladen werden zu können.
