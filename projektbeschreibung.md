@@ -4,7 +4,7 @@ In diesem Projekt baue ich eine automatische Ladungssation für Drohnen. Sobald 
 Der Pilot landet auf einer Landeplattform. Unterhalb der Landeplattform und unterhalb der Drohne ist jeweils eine Spule angebracht. Gleichstrom von einer Stromquelle fliesst zur Spule an der Landeplattform und führt dazu, dass eine Anziehungskraft zwischen den zwei Spulen entsteht. Dies ermöglicht, dass die Spulen automatisch übereinander liegen. Sobald die Positionierung geschehen ist, fliesst Wechselstrom zur Spule an der Landeplattform. Dieser Wechselstrom erzeugt ein sich ständig änderndes Magnetfeld. Durch die elektromagnetische Induktion kann die Spule an der Drohne Strom herzustellen. Der Strom fliesst dann von der Spule in den Akku der Drohne (verbundenes Kabel). Schlussendlich kann die Drohne wieder abheben.
 ## Muss
 * Die Drohne muss auf einer Plattform landen können.
-* Die Drohne wird in die richtige Position gebracht, um mit wireless charging geladen werden zu können.
+* Die Drohne wird in die richtige Position gebracht und mit wireless charging geladen.
 * Die Drohne ist fähig, wieder abzuheben.
 ## Optional
 * Die Box verfügt über Wettersensoren und gibt dem Piloten je nach Wetterverhältnissen Empfehlungen über das Fliegen / nicht Fliegen.
