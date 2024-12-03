@@ -51,6 +51,8 @@ Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei S
 </table>
 
 # Skizze 
+![Hardware an der Landeplattform](C:\Users\johan\OneDrive - Kantonsschule Romanshorn\Ergänzungsfach\charging-box-drones "Hardware an der Landeplattform")
+
 
 # Kostenabschätzung
 <table>
