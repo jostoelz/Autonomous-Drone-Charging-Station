@@ -1,19 +1,20 @@
 # Abstract  
-In diesem Projekt baue ich eine automatische Ladungssation für Drohnen. Sobald die Drohne vom Pilot auf einer Plattform gelandet wurde, setzt ein Mechanismus für das Laden der Drohne ein. Wenn das Laden abgeschlossen ist, ist die Drohne wieder abflugbereit.
+In diesem Projekt baue ich eine automatische Ladevorrichtung für Drohnen. Sobald die Drohne vom Piloten auf einer Plattform gelandet wurde, wird ein Mechanismus aktiviert, der die Drohne in die richtige Position bringt und den Ladevorgang startet. Nach Abschluss des Ladevorgangs ist die Drohne wieder abflugbereit.
 # Projekt im Detail
-Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei Seiten über Wände, an denen jeweils ein Ultraschallsensor angebracht ist. An den zwei anderen Seiten befinden sich je ein Linearantrieb, an dem ein Schieber angebracht ist. Die Ultraschallsensoren messen die Entfernung der Drohne zu den Wänden. Der Arduino entscheidet, ob die Drohne bereits an der richtigen Position befindet (in der Ecke der zwei Wänden). Wenn dies nicht der Fall ist, bewegen die Linearantriebe die Drohne so weit in die Ecke, bis die Drohne an der richtigen Position befindet. Unterhalb der Landeplattform ist ein Wireless charging Sender und unterhalb der Drohne ein Wireless charging Empfänger montiert. Sobald die Wireless charging Komponenten übereinander liegen, fliesst Strom von einem Netzteil zum Wireless charging Sender. Der Wireless charging Empfänger an der Drohne wandelt die Wechselspannung wieder in Gleichstrom um. Der Strom fliesst dann in den Akku der Drohne, der mit einem Kabel verbunden ist. Sobald der Ladevorgang abgeschlossen ist, kann die Drohne wieder abheben.
+Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mit Wänden versehen, während an den anderen beiden Seiten jeweils ein Linearantrieb mit einem Schieber angebracht ist. Die Linearantriebe bewegen die Drohne so weit in die Ecke, bis sie sich in der richtigen Position befindet. Unterhalb der Landeplattform ist ein Wireless-Charging-Sender montiert, während sich unterhalb der Drohne der entsprechende Wireless-Charging-Empfänger befindet. Sobald die beiden Wireless-Charging-Komponenten übereinander ausgerichtet sind, fließt Strom von einem Netzteil zum Sender. Der Empfänger an der Drohne wandelt die Wechselspannung in Gleichstrom um, der dann in den Akku der Drohne fließt, der über ein Kabel mit dem Empfänger verbunden ist. Sobald der Ladevorgang abgeschlossen ist, kann die Drohne wieder abheben.
 ## Muss
-* Die Drohne muss auf einer Plattform landen können.
-* Die Drohne wird in die richtige Position gebracht und mit wireless charging geladen.
-* Die Drohne ist fähig, wieder abzuheben.
+* Die Drohne muss in der Lage sein, auf einer Plattform zu landen.
+* Die Drohne wird in die richtige Position bewegt und über Wireless Charging aufgeladen.
+* Die Drohne muss nach dem Ladevorgang wieder abheben können.
 ## Optional
-* Die Box verfügt über Wettersensoren und gibt dem Piloten je nach Wetterverhältnissen Empfehlungen über das Fliegen / nicht Fliegen.
-* Die Box ist während dem Ladevorgang und dem Fliegen der Drohne geschlossen. Dies schützt die Drohne und die Box vor Niederschlag.
-* Die Box ist mittels Solarpanels autark. Bei gutem Wetter kann sie sich von selbst wiederaufladen.
-* Die Station verfügt über LEDs, die den Landeplatz bei Dunkelheit beleuchten, sodass die Drohne auch nachts sicher landen kann.
+* Die Box ist mit Wettersensoren ausgestattet und gibt dem Piloten je nach Wetterbedingungen Empfehlungen, ob er fliegen sollte oder nicht.
+* Während des Ladevorgangs und beim Fliegen bleibt die Box geschlossen, um die Drohne und die Box vor Niederschlag zu schützen.
+* Die Box ist durch Solarpanels autark und kann sich bei gutem Wetter selbst wieder aufladen.
+* Die Station ist mit LEDs ausgestattet, die den Landeplatz bei Dunkelheit beleuchten, sodass die Drohne auch nachts sicher landen kann.
 * Die Station sendet Benachrichtigungen an den Piloten, wenn der Ladevorgang abgeschlossen ist.
-* Die Station kann auf externe Wettervorhersagen zugreifen und den Piloten über Sturm- / Niederschlagwarnungen warnen.
-* Die Station liest den Batteriezustand der Drohne aus und informiert den Piloten über eine rechtzeitige Landung.
+* Die Station kann auf externe Wettervorhersagen zugreifen und den Piloten vor Sturm- oder Niederschlagwarnungen warnen.
+* Die Station liest den Batteriezustand der Drohne aus und informiert den Piloten rechtzeitig über die Notwendigkeit einer Landung.
+
 # Zeitplan
 <table>
   <thead>
@@ -32,12 +33,24 @@ Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei S
       <td>26.11.24</td>
     </tr>
     <tr>
-      <td>Wireless charging</td>
+      <td>Wireless-Charging</td>
       <td>17.12.24</td>
-    <tr>
-      <td>Landeplattform und Mechanismus, der die Drohne in die richtige Position transportiert</td>
-      <td>18.01.25</td>
     </tr>
+    <tr>
+      <td>Mechanismus: Linearantriebe bewegen Drohne an richtige Stelle</td>
+      <td>07.01.25</td>
+    </tr>
+    <tr>
+      <td>3D-Druck der Landeplattform und der Halterung an Drohne</td>
+      <td>14.01.25</td>
+    </tr>
+    <tr>
+      <td>Wirless-Charging, Mechanimsus und 3D-Druck miteinander kombinieren</td>
+      <td>04.02.25</td>
+    </tr>
+     <tr>
+      <td>Dokumentation finalisieren</td>
+      <td>11.02.25</td>
     </tr>
     <tr>
       <td>Reserve oder optionale Features einbauen</td>
@@ -96,11 +109,6 @@ Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei S
       <td>https://www.adafruit.com/product/355 </td>
     </tr>
     <tr>
-      <td>Ultraschallsensor</td>
-      <td>3.28 Fr.</td>
-      <td>https://www.reichelt.com/ch/de/shop/produkt/entwicklerboards_-_ultraschall_abstandssensor_hc-sr04-161487?PROVID=2788&gad_source=1&gclid=CjwKCAiAl4a6BhBqEiwAqvrquhSdVMxJ-SXono8RQaygsfe0myq6rt9zlikawhww3HqIJLXRNSHbShoCsIEQAvD_BwE&q=%2Fch%2Fde%2Fshop%2Fentwicklerboards-ultraschall-abstandssensor-hc-sr04-debo-sen-ultra-p161487.html </td>
-    </tr>
-    <tr>
       <td>Linearantrieb</td>
       <td>26.40 Fr.</td>
       <td>https://www.digikey.ch/de/products/detail/dfrobot/FIT0806/14824997?utm_adgroup=General&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_All%20%28Catch-up%29&utm_term=&productid=14824997&utm_content=General&utm_id=go_cmp-17998691427_adg-142975836667_ad-615797033692_pla-928703728693_dev-c_ext-_prd-14824997_sig-Cj0KCQiAi_G5BhDXARIsAN5SX7rssZ3EEsqBEBEYH0yZeIE8DGDnWFBT3iVk8qHvuoOBPWbMhP5sOa0aAuQsEALw_wcB&gad_source=1&gclid=Cj0KCQiAi_G5BhDXARIsAN5SX7rssZ3EEsqBEBEYH0yZeIE8DGDnWFBT3iVk8qHvuoOBPWbMhP5sOa0aAuQsEALw_wcB </td>
@@ -112,4 +120,4 @@ Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei S
     </tr>
   </tbody>
 </table>
-Bemerkung: Ich brauche zwei Linearantriebe, zwei Transformatoren und zwei Ultraschallsensoren.
+Bemerkung: Ich brauche zwei Linearantriebe und zwei Transformatoren.
