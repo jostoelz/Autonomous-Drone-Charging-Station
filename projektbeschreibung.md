@@ -110,8 +110,8 @@ Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mi
     </tr>
     <tr>
       <td>Linearantrieb</td>
-      <td>26.40 Fr.</td>
-      <td>https://www.digikey.ch/de/products/detail/dfrobot/FIT0806/14824997?utm_adgroup=General&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_All%20%28Catch-up%29&utm_term=&productid=14824997&utm_content=General&utm_id=go_cmp-17998691427_adg-142975836667_ad-615797033692_pla-928703728693_dev-c_ext-_prd-14824997_sig-Cj0KCQiAi_G5BhDXARIsAN5SX7rssZ3EEsqBEBEYH0yZeIE8DGDnWFBT3iVk8qHvuoOBPWbMhP5sOa0aAuQsEALw_wcB&gad_source=1&gclid=Cj0KCQiAi_G5BhDXARIsAN5SX7rssZ3EEsqBEBEYH0yZeIE8DGDnWFBT3iVk8qHvuoOBPWbMhP5sOa0aAuQsEALw_wcB </td>
+      <td>35.90 Fr.</td>
+      <td>https://www.bastelgarage.ch/6v-electric-cylinder-100mm-128n?gad_source=1&gclid=Cj0KCQiAi_G5BhDXARIsAN5SX7pOlEy0XSUf0RxYFtqWwyanmA4Y5NWjRPP5CRwlg6IoworPIEc1klAaAvznEALw_wcB</td>
     </tr>
     <tr>
     <td>Motor driver</td>
