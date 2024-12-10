@@ -37,7 +37,7 @@ Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mi
       <td>17.12.24</td>
     </tr>
     <tr>
-      <td>Mechanismus: Linearantriebe bewegen Drohne an richtige Stelle</td>
+      <td>Mechanismus: Linearantriebe bewegen Drohne an richtige Stelle, sobald die Ultraschallsensoren die Erlaubnis gegeben haben</td>
       <td>07.01.25</td>
     </tr>
     <tr>
@@ -118,6 +118,11 @@ Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mi
     <td>6.60 Fr.</td>
     <td>https://www.conrad.ch/de/p/joy-it-sbc-motodriver2-entwickler-platine-1-st-1573541.html?utm_source=google-shopping-de&utm_medium=search&utm_campaign=shopping-online-de&utm_content=shopping-ad_cpc&WT.srch=1&ef_id=Cj0KCQiAi_G5BhDXARIsAN5SX7o6_0Nbb4KqGNjm55Ye8g1xzGAJNyGisIYAgcIQBwoagaDJP2YjFNAaAjlnEALw_wcB%3AG%3As&utm_source=google&utm_medium=cpc&utm_campaign=ade_3_shopping_GERMAN&utm_id=319998844&gad_source=1&gclid=Cj0KCQiAi_G5BhDXARIsAN5SX7o6_0Nbb4KqGNjm55Ye8g1xzGAJNyGisIYAgcIQBwoagaDJP2YjFNAaAjlnEALw_wcB </td>
     </tr>
+    <tr>
+    <td>Ultraschallsensor</td>
+    <td>3.28 Fr.</td>
+    <td>https://www.reichelt.com/ch/de/shop/produkt/entwicklerboards_-_ultraschall_abstandssensor_hc-sr04-161487?PROVID=2788&gad_source=1&gclid=CjwKCAiAl4a6BhBqEiwAqvrquhSdVMxJ-SXono8RQaygsfe0myq6rt9zlikawhww3HqIJLXRNSHbShoCsIEQAvD_BwE&q=%2Fch%2Fde%2Fshop%2Fentwicklerboards-ultraschall-abstandssensor-hc-sr04-debo-sen-ultra-p161487.html </td>
+    </tr>
   </tbody>
 </table>
-Bemerkung: Ich brauche zwei Linearantriebe und zwei Transformatoren.
+Bemerkung: Ich brauche zwei Linearantriebe, zwei Transformatoren und zwei Ultraschallsensoren.
