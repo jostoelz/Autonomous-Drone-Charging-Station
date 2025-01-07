@@ -1,7 +1,7 @@
 # Abstract  
 In diesem Projekt baue ich eine automatische Ladevorrichtung für Drohnen. Sobald die Drohne vom Piloten auf einer Plattform gelandet wurde, wird ein Mechanismus aktiviert, der die Drohne in die richtige Position bringt und den Ladevorgang startet. Nach Abschluss des Ladevorgangs ist die Drohne wieder abflugbereit.
 # Projekt im Detail
-Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mit Wänden versehen, während an den anderen beiden Seiten jeweils ein Linearantrieb mit einem Schieber angebracht ist. Die Linearantriebe bewegen die Drohne so weit in die Ecke, bis sie sich in der richtigen Position befindet. Unterhalb der Landeplattform ist ein Wireless-Charging-Sender montiert, während sich unterhalb der Drohne der entsprechende Wireless-Charging-Empfänger befindet. Sobald die beiden Wireless-Charging-Komponenten übereinander ausgerichtet sind, fließt Strom von einem Netzteil zum Sender. Der Empfänger an der Drohne wandelt die Wechselspannung in Gleichstrom um, der dann in den Akku der Drohne fließt, der über ein Kabel mit dem Empfänger verbunden ist. Sobald der Ladevorgang abgeschlossen ist, kann die Drohne wieder abheben.
+Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei Seiten über Wände, an denen zwei Ultraschallsensoren angebracht sind. An den anderen beiden Seiten ist jeweils ein Linearantrieb mit einem Schieber angebracht. Sobald die Ultraschallsensoren eine Drohne auf der Landeplattform erfassen, bewegen die Linearantriebe die Drohne so weit in die Ecke, bis sie sich in der richtigen Position befindet. Unterhalb der Landeplattform ist ein wireless charging Sender montiert, während sich unterhalb der Drohne der entsprechende wireless charging Empfänger befindet. Sobald die Ultraschallsesonren erkennen, dass sich die Drohne in der Ecke befindet, fließt Strom von einem Netzteil zum wireless charging Sender. Der Empfänger an der Drohne wandelt die Wechselspannung in Gleichstrom um, der dann in den Akku der Drohne fließt, der über ein Kabel mit dem wireless charging Empfänger verbunden ist. Sobald der Ladevorgang abgeschlossen ist, kann die Drohne wieder abheben.
 ## Muss
 * Die Drohne muss in der Lage sein, auf einer Plattform zu landen.
 * Die Drohne wird in die richtige Position bewegt und über Wireless Charging aufgeladen.
@@ -33,7 +33,7 @@ Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mi
       <td>26.11.24</td>
     </tr>
     <tr>
-      <td>Wireless-Charging</td>
+      <td>wireless charging</td>
       <td>17.12.24</td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@ Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mi
       <td>14.01.25</td>
     </tr>
     <tr>
-      <td>Wirless-Charging, Mechanimsus und 3D-Druck miteinander kombinieren</td>
+      <td>wirless charging, Mechanimsus und 3D-Druck miteinander kombinieren</td>
       <td>04.02.25</td>
     </tr>
      <tr>
@@ -79,7 +79,7 @@ Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mi
   </thead>
   <tbody>
     <tr>
-      <td>Wireless charging Sender & Empfänger</td>
+      <td>wireless charging Sender & Empfänger</td>
       <td>7.71 Fr.</td>
       <td>https://www.mouser.ch/ProductDetail/Seeed-Studio/106990017?qs=SElPoaY2y5KdLskE1shzqQ%3D%3D&mgh=1&utm_id=20002739518&gad_source=1&gclid=CjwKCAiA3ZC6BhBaEiwAeqfvyuNlfda5-xuXoLrLc3qdhUh8dxR87X4ZW45SWwa3tzxUaDRKo-8zQBoC-xEQAvD_BwE</td>
     </tr>
