@@ -98,12 +98,6 @@ Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mi
       <td>https://www.bastelgarage.ch/dc-dc-1-5a-step-up-boost-converter </td>
     </tr>
     <tr>
-      <td>USB C zu USB C Buchse</td>
-      <td>3.45 Fr.</td>
-  
-  <td>https://www.reichelt.com/ch/de/shop/produkt/usb_3_1_adapter_c_buchse_auf_c_buchse-334204?PROVID=2808&gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V_titRytBqwA0Gy1v7FJ-Bq9HDkKADi7Hypsq4n8LuFO0V1X0WMRuMaAgEkEALw_wcB&q=%2Fch%2Fde%2Fshop%2Fusb-3-1-adapter-c-buchse-auf-c-buchse-shvp-bs13-40003-p334204.html </td>
-    </tr>
-    <tr>
       <td>Mosfet</td>
       <td>2.25 Fr.</td>
       <td>https://www.adafruit.com/product/355 </td>
@@ -125,4 +119,4 @@ Der Pilot landet auf einer Landeplattform. Diese Plattform ist an zwei Seiten mi
     </tr>
   </tbody>
 </table>
-Bemerkung: Ich brauche zwei Linearantriebe, zwei Transformatoren und zwei Ultraschallsensoren.
+Bemerkung: Ich brauche zwei Linearantriebe und zwei Ultraschallsensoren.
