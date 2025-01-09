@@ -85,8 +85,8 @@ Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei S
     </tr>
     <tr>
       <td>offenes Ende zu USB C</td>
-      <td>2.80 Fr.</td>
-      <td>https://www.brack.ch/delock-usb-stromkabel-micro-usb-b-offen-0-1-m-402206?utm_source=google&utm_medium=cpc&utm_campaign=%21cc-pssh%21l-d%21e-g%21t-pla%21t2-css%21k1-it%21z-it_multimedia_pmax&utm_term=&adgroup_id=&ad_position=&ad_type=pla&campaign_id=18732681987&gad_source=1&gclid=Cj0KCQiAi_G5BhDXARIsAN5SX7qQI4-gUtL5nZU0V28ZiZdfYvwMI_oJ12A6JlMSsK3Fn7kvi64xrdwaAtrfEALw_wcB&hc_fcv=ZzyTPAKYsXpnZCA8~NnmHD2A7XPOcW--ozzzzzzzz~NmMwpN-2n_4NzUD7zzzzzzzz </td>
+      <td>5.45 Fr.</td>
+      <td>https://www.conrad.ch/de/p/usb-c-3-1-stecker-mit-offenem-kabelende-usb-c-3-1-tc-2509033-tru-components-inhalt-1-st-1587137.html</td>
     </tr>
     <tr>
       <td>Netzteil</td>
