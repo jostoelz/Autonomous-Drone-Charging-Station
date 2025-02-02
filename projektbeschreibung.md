@@ -14,7 +14,7 @@ Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei S
 * Die Station sendet Benachrichtigungen an den Piloten, wenn der Ladevorgang abgeschlossen ist.
 * Die Station kann auf externe Wettervorhersagen zugreifen und den Piloten vor Sturm- oder Niederschlagwarnungen warnen.
 * Die Station liest den Batteriezustand der Drohne aus und informiert den Piloten rechtzeitig über die Notwendigkeit einer Landung.
-* Die Station verfügt über GPS, damit auch sicheres Landen ohne Sichtkontakt möglich ist
+* Die Station verfügt über GPS, damit auch sicheres Landen ohne Sichtkontakt möglich ist, die schnellste Route zwischen Drohne und Ladestation angezeigt werden kann oder wenn die Station geklaut wurde, eine Nachverfolgung stattfinden kann.
 
 # Zeitplan
 <table>
