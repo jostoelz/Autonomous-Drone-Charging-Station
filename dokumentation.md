@@ -61,8 +61,9 @@ In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. Der wir
 ![Hardware_Drohne](Bilder/Hardware_Drohne.jpg)
 
 ## Beschreibung der Software
+Die Software ist so struktruiert, dass (sofern das Gerät angeschalten ist) die Ultraschallsensoren ständig den Abstand messen. Wenn sie dann ein Objekt näher als überlicherweise erkennen, werden die Motoren angeschalten. Anschliessend gibt es je zwei Durchgänge, während denen nacheinander beide Linearantriebe sich vollständig ausfahren. Es werden zwei Durchgänge durchgeführt, um sicherzustellen, dass die Drohne sich wirklich genau in der richtigen Position befindet. Wenn das Manöver abgeschlossen ist, wird der Pin für das wireless charging mit Strom beliefert. Wenn die Drohne wieder weggeflogen ist (wird durch den gemessenen Abstand der Ultraschallsensoren überprüft), wird der Strombetrieb für das wireless charging wieder beendet.
 ## Benützung
-Ein Netzteil mit 5V kann in die Power-Öffnung gesteckt werden.
+Die Funktionalität des Gerätes kann man ohne Drohne nur eingeschränkt überprüfen. Jedoch kann man ein 7V-12V Netzteil in die Power-Buchse stecken. Dann sollte man zumindest die LEDs ein- / ausschalten, die Ein- / Ausschalttaste betätigen und den Schriftzug "Landebereit" auf dem Display ablesen können. Andererfalls kann man auch den untenstehenden Code über die Arduino IDE nochmals ausführen lassen.
 ## Demonstration
 Ich habe ein <a href="https://kantonsschuleromanshorn-my.sharepoint.com/:v:/g/personal/jostoelz_ksr_ch/EYghmAxh7fZNp1EXa3LVJkMBQi_qL3hC4DV3Lf5EdQMKvw?e=Lkv3ng ">Video</a> aufgenommen, welches die Ladestation in Aktion demonstriert. Um nachzuweisen, dass tatsächlich die Drohne geladen wird, biete ich gerne an, dies auch nach Abgabe des Projektes direkt an der Drohne zu zeigen. Es ist leider nicht möglich, dies auf einem Video festzuhalten. Ebenso wird im Video der An- / Ausschalter, das Display, der Poti und die LEDs nicht genauer demonstriert.
 # Entwicklung
@@ -82,3 +83,145 @@ Nächstes Mal würde ich mich mehr an meinen Zeitplan halten und zuerst die wich
 * Man könnte aber auch die Station aus Metall herstellen und die elektronsichen Verbindungen isolieren, sodass sie vor Nässe besser geschützt sind.
 * Eine weitere Erweiterung könnte die Installierung eines GPS sein, damit auch sicheres Landen ohne Sichtkontakt möglich ist, die schnellste Route zwischen Drohne und Ladestation angezeigt werden kann oder wenn die Station geklaut wurde, eine Nachverfolgung stattfinden kann.
 # Code
+<pre>#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include "OneButton.h"
+
+#define ECHO_EINGANGS_PIN_2 5  // Echo Eingangs-Pin Ultraschallsensor 1
+#define TRIGGER_AUSGANGS_PIN_2 6  // Trigger Ausgangs-Pin Ultraschallsensor 1
+#define ECHO_EINGANGS_PIN_1 11 // Echo Eingangs-Pin Ultraschallsensor 2
+#define TRIGGER_AUSGANGS_PIN_1 10 // Trigger Ausgangs-Pin Ultraschallsensor 2
+
+// benötigte Variablen
+int ENTFERNUNG_DROHNE = 24; 
+int UMRECHNUNGSFAKTOR = 58.2; // Schallgeschwindigkeit durch 2
+long ZEIT_ZU_DROHNE = 45000; // Zeit für Weg von Linearantrieb zu Drohne
+int Linearantrieb_AN = 180;
+int Linearantrieb_AUS = 180;
+long abstand1; // Ultraschallsensor 1
+long abstand2; // Ultraschallsensor 2
+long dauer1; // Ultraschallsensor 1
+long dauer2; // Ultraschallsensor 2
+int counter = 0;
+
+// Motor 1
+const int MOTOR_PIN_1 = 9; // vor
+const int MOTOR_PIN_2 = 8; // zurück
+
+// Motor 2
+const int MOTOR_PIN_3 = 7; // vor
+const int MOTOR_PIN_4 = 4; // zurück
+
+// LED & Steuerung
+const int POT_PIN = A0;  // Pin für das Potentiometer
+const int LED_PIN = 2;   // PWM-Pin für die LED
+const int POWER_PIN = 13; // Pin für das wireless charging
+const int SWITCH_PIN = 12;  // Pin für den Schalter
+
+LiquidCrystal_I2C lcd(0x27, 20, 4); // LCD mit 20 Zeichen, 4 Zeilen
+
+void setup() {
+    // Schalter-Pin als Internen Pull-up-Widerstand nutzen
+    pinMode(SWITCH_PIN, INPUT_PULLUP); 
+
+    // LED-Pin als Ausgang setzen
+    pinMode(LED_PIN, OUTPUT); 
+
+    // Ultraschallsensorenpins als Eing- & Ausgänge setzen
+    pinMode(TRIGGER_AUSGANGS_PIN_1, OUTPUT);
+    pinMode(ECHO_EINGANGS_PIN_1, INPUT);
+    pinMode(TRIGGER_AUSGANGS_PIN_2, OUTPUT);
+    pinMode(ECHO_EINGANGS_PIN_2, INPUT);
+
+    // Motorpins als Ausgänge setzen
+    pinMode(MOTOR_PIN_1, OUTPUT);
+    pinMode(MOTOR_PIN_2, OUTPUT);
+    pinMode(MOTOR_PIN_3, OUTPUT);
+    pinMode(MOTOR_PIN_4, OUTPUT);
+    pinMode(POWER_PIN, OUTPUT);
+
+    // LCD initialisieren
+    lcd.init();
+    lcd.backlight();
+}
+
+void loop() {
+    int switchState = digitalRead(SWITCH_PIN); 
+    
+    if (switchState == HIGH) { // Schalter eingeschaltet
+        lcd.setCursor(0, 1);
+
+        if (counter == 0) {
+            lcd.clear();
+            lcd.print("Landebereit");
+        } else if (counter > 0 && counter < 3) {
+            lcd.clear();
+            lcd.print("Am Manövrieren");
+        } else if (counter == 3) {
+            lcd.clear();
+            lcd.print("Am Laden");
+        }
+
+        // Abstandsmessung für Sensor 1
+        digitalWrite(TRIGGER_AUSGANGS_PIN_1, HIGH);
+        delayMicroseconds(10);
+        digitalWrite(TRIGGER_AUSGANGS_PIN_1, LOW);
+        dauer1 = pulseIn(ECHO_EINGANGS_PIN_1, HIGH);
+        abstand1 = dauer1 / UMRECHNUNGSFAKTOR; 
+
+        // Pause zwischen Ultraschall-Messungen
+        delay(500); 
+
+        // Abstandsmessung für Sensor 2
+        digitalWrite(TRIGGER_AUSGANGS_PIN_2, HIGH);
+        delayMicroseconds(10);
+        digitalWrite(TRIGGER_AUSGANGS_PIN_2, LOW);
+        dauer2 = pulseIn(ECHO_EINGANGS_PIN_2, HIGH);
+        abstand2 = dauer2 / UMRECHNUNGSFAKTOR;
+
+        // Pause zwischen Ultraschall-Messungen
+        delay(500);
+
+        if ((abstand1 >= 1 && abstand1 <= ENTFERNUNG_DROHNE) || (abstand2 >= 1 && abstand2 <= ENTFERNUNG_DROHNE)) {
+            if (counter < 2) {
+                analogWrite(MOTOR_PIN_1, Linearantrieb_AN);
+                delay(ZEIT_ZU_DROHNE);
+                analogWrite(MOTOR_PIN_1, Linearantrieb_AUS);
+                delay(900); // Pause zwischen beiden Motor-Richtungen
+                analogWrite(MOTOR_PIN_2, Linearantrieb_AN);
+                delay(ZEIT_ZU_DROHNE);
+                analogWrite(MOTOR_PIN_2, Linearantrieb_AUS);
+                analogWrite(MOTOR_PIN_3, Linearantrieb_AN);
+                delay(ZEIT_ZU_DROHNE);
+                analogWrite(MOTOR_PIN_3, Linearantrieb_AUS);
+                delay(900); // Pause zwischen beiden Motor-Richtungen
+                analogWrite(MOTOR_PIN_4, Linearantrieb_AN);
+                delay(ZEIT_ZU_DROHNE);
+                analogWrite(MOTOR_PIN_4, Linearantrieb_AUS);
+                counter++;
+            }
+        }
+
+        // wireless charging einschalten
+        if (counter == 2) {
+            digitalWrite(POWER_PIN, HIGH);
+            counter++;
+        }
+
+        // wirelss charging ausschalten, wenn Drohne weggeflogen ist
+        if (abstand1 >= ENTFERNUNG_DROHNE && abstand2 >= ENTFERNUNG_DROHNE) {
+            digitalWrite(POWER_PIN, LOW);
+            counter = 0;
+        }
+
+        // LED-Helligkeit anpassen
+        int potValue = analogRead(POT_PIN);
+        int pwmValue = map(potValue, 0, 1023, 0, 255);
+        analogWrite(LED_PIN, pwmValue);
+        delay(10);
+    } else { // Schalter ausgeschalten
+        analogWrite(LED_PIN, 0); // LEDs auschalten
+        counter = 0;
+        lcd.clear();
+    }
+}</pre>
