@@ -70,7 +70,7 @@ Ich habe ein <a href="https://kantonsschuleromanshorn-my.sharepoint.com/:v:/g/pe
 # Entwicklung
 Danach habe ich die Ausmessungen für das Gehäusse vorgenommen. Die folgende Skizze zeigen die Ergebnisse:
 
-![Skizze_Gehäuse](Skizze_Gehäuse.png)
+![Skizze Gehäuse](Skizze_Gehäuse.png)
 
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
