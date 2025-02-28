@@ -63,7 +63,27 @@ In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. Der wir
 
 Die Hardware an der Landeplattform wird im nächsten Bild illustriert. 
 ![Hardware_Landeplattform](Bilder/Hardware_Landeplattform.jpg)
-
+Im folgenden werden die wichtigsten verbauten Komponenten mit Bildern gezeigt.
+<br> Der Arduino ist der Kopf des Gerätes: </br>
+![Arduino](Bilder/Arduino.JPEG)
+Display:
+![Display](Bilder/Display.JPEG)
+Platine für LEDs:
+![LEDs](Bilder/LEDs.JPEG)
+Lötplatine:
+![Lötplatine](Bilder/Lötplatine.JPEG)
+Motor driver:
+![Motor_driver](Bilder/Motor_driver.JPEG)
+Poti:
+![Poti](Bilder/Poti.JPEG)
+Schalter:
+![Schalter](Bilder/Schalter.JPEG)
+Transformator:
+![Transformator](Bilder/Transformator.JPEG)
+Ultraschallsensor:
+![Ultraschallsensor](Bilder/Ultraschallsensor.JPEG)
+wireless charging Sender:
+![wireless_charging](Bilder/wireless_charging.JPEG)
 ## Beschreibung der Software
 Die Software ist so struktruiert, dass (sofern das Gerät angeschalten ist) die Ultraschallsensoren ständig den Abstand messen. Wenn sie dann ein Objekt näher als überlicherweise erkennen, werden die Motoren angeschalten. Anschliessend gibt es je zwei Durchgänge, während denen nacheinander beide Linearantriebe sich vollständig ausfahren. Es werden zwei Durchgänge durchgeführt, um sicherzustellen, dass die Drohne sich wirklich genau in der richtigen Position befindet. Wenn das Manöver abgeschlossen ist, wird der Pin für das wireless charging mit Strom beliefert. Wenn die Drohne wieder weggeflogen ist (wird durch den gemessenen Abstand der Ultraschallsensoren überprüft), wird der Strombetrieb für das wireless charging wieder beendet.
 ## Benützung
