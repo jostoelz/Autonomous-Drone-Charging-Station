@@ -57,7 +57,9 @@ Die verwendeten elektronischen Komponenten werden in der folgenden Tabelle aufge
   </tbody>
 </table>
 Eine wichtige Bemerkung ist, dass ich zwei Ultraschallsensoren und zwei Linearantriebe verbaut habe. Dazu kommen ebenfalls noch günstige Standard-Komponenten wie Poti, Display, Slide Switch und Widerstände.
-In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. 
+In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. Der wireless charging Empfänger wurde an der Unterseite der Drohne mit Klebeband montiert. An den Empfänger wurde ein Kabel mit offenem Ende zu USB C gelötet, das schlussendlich in die Drohne gesteckt wurde.
+![Hardware_Drohne](Bilder/Hardware_Drohne.jpg)
+
 ## Beschreibung der Software
 ## Benützung
 Ein Netzteil mit 5V kann in die Power-Öffnung gesteckt werden.
@@ -67,7 +69,7 @@ Ich habe ein <a href="https://kantonsschuleromanshorn-my.sharepoint.com/:v:/g/pe
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
 Als das Projekt startete, ging es zuerst an die Ideenfindung und die anschliessende Überlegung, wie man diese Idee umsetzen möchte. Dies war aber bei mir eine mühsame Angelegenheit, da es online keine Tutorials gibt, wie man eine selsbtändige DIJ Ladestation für Drohnen baut. Im speziellen war es schwierig herauszufinden, wie man die Drohne in die richtige Position bringt und wie man sie auflädt (per Kabel oder mit wireless charging). Einiger meiner Überlegungen dazu habe ich mir skizziert: 
-![Skizzen](Bilder/Skizzen.png)
+![Skizzen](Bilder/Skizzen.jpg)
 Eine andere Schwierigkeit war es, die passenden Teilchen herauszusuchen, denn auch in Bezug auf Stromstärke und Spannung musste beispielsweise Rücksicht auf die Drohne genommen werden. Die Recherche dafür hat lange in Anspruch genommen. Dazu kam noch die wochenlange verspätete Ankunft der Materialien, was dazu geführt hat, dass die Arbeit mit Teilchen erst ziemlich spät begonnen konnte.
 Im Gegenzug dazu war dann die Zusammensetzung der verschiedenen elektronischen Komponenten unkompliziert. Widerrum der Bau der Station hat viele Ausmessungen benötigt und Zeit beansprucht. Es musste sich genau überlegt werden, wie und vor allem auch in welcher Reihenfolge man was herstellt und befestigt. Es musste vor allem genau gearbeitet werden, sodass die wireless charging Komponenten exakt übereinander ausgerichtet sind.
 ![wireless charging Sender & Empfänger](Bilder/Wireless_charging_Sender_Empfänger.png)
