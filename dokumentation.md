@@ -68,12 +68,16 @@ Die Funktionalität des Gerätes kann man ohne Drohne nur eingeschränkt überpr
 ## Demonstration
 Ich habe ein <a href="https://kantonsschuleromanshorn-my.sharepoint.com/:v:/g/personal/jostoelz_ksr_ch/EYghmAxh7fZNp1EXa3LVJkMBQi_qL3hC4DV3Lf5EdQMKvw?e=Lkv3ng ">Video</a> aufgenommen, welches die Ladestation in Aktion demonstriert. Um nachzuweisen, dass tatsächlich die Drohne geladen wird, biete ich gerne an, dies auch nach Abgabe des Projektes direkt an der Drohne zu zeigen. Es ist leider nicht möglich, dies auf einem Video festzuhalten. Ebenso wird im Video der An- / Ausschalter, das Display, der Poti und die LEDs nicht genauer demonstriert.
 # Entwicklung
+Danach habe ich die Ausmessungen für das Gehäusse vorgenommen. Die folgende Skizze zeigen die Ergebnisse:
+
+![Skizze_Gehäuse](Skizze_Gehäuse.png)
+
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
 Als das Projekt startete, ging es zuerst an die Ideenfindung und die anschliessende Überlegung, wie man diese Idee umsetzen möchte. Dies war aber bei mir eine mühsame Angelegenheit, da es online keine Tutorials gibt, wie man eine selsbtändige DIJ Ladestation für Drohnen baut. Im speziellen war es schwierig herauszufinden, wie man die Drohne in die richtige Position bringt und wie man sie auflädt (per Kabel oder mit wireless charging). Einiger meiner Überlegungen dazu habe ich mir skizziert: 
 ![Skizzen](Bilder/Skizzen.png)
 Eine andere Schwierigkeit war es, die passenden Teilchen herauszusuchen, denn auch in Bezug auf Stromstärke und Spannung musste beispielsweise Rücksicht auf die Drohne genommen werden. Die Recherche dafür hat lange in Anspruch genommen. Dazu kam noch die wochenlange verspätete Ankunft der Materialien, was dazu geführt hat, dass die Arbeit mit Teilchen erst ziemlich spät begonnen konnte.
-Im Gegenzug dazu war dann die Zusammensetzung der verschiedenen elektronischen Komponenten unkompliziert. Widerrum der Bau der Station hat viele Ausmessungen benötigt und Zeit beansprucht. Es musste sich genau überlegt werden, wie und vor allem auch in welcher Reihenfolge man was herstellt und befestigt. Es musste vor allem genau gearbeitet werden, sodass die wireless charging Komponenten exakt übereinander ausgerichtet sind.
+Im Gegenzug dazu war dann die Zusammensetzung der verschiedenen elektronischen Komponenten unkompliziert. Widerrum der Bau der Station hat viele Ausmessungen benötigt und Zeit beansprucht. Es musste sich genau überlegt werden, wie und vor allem auch in welcher Reihenfolge man was herstellt und befestigt. Es musste vor allem genau gearbeitet werden, sodass die wireless charging Komponenten exakt übereinander ausgerichtet sind, wie im folgenden Bild illustriert.
 ![wireless charging Sender & Empfänger](Bilder/Wireless_charging_Sender_Empfänger.png)
 ## Was würde ich anders machen?
 Nächstes Mal würde ich mich mehr an meinen Zeitplan halten und zuerst die wichtigsten Ziele erreichen, bevor ich mich den Erweiterungen widme. Ich habe mich leider über mehrere Wochen dem optionalen Feature des Zugriffs der externe Wettervorhersagen über eine API gekümmert. Damit wollte ich dem Pilot eine Empfehlung (je nach Wind & Niederschlag) über das Fliegen geben. Jedoch ist dieses Feature immer an einem bestimmen Punkt gescheitert. Ich wollte nicht aufgeben und so schob ich die eigentlich wichtigen Dinge, wie die Herstellung der Box, immer weiter heraus. Schlussendlich bin ich in einen Stress gekommen und konnte deshalb gewünschte Änderungen aus zeitlichen Gründen nicht mehr umsetzen.
