@@ -66,19 +66,19 @@ Die Hardware an der Landeplattform wird im nächsten Bild illustriert.
 Im folgenden werden die wichtigsten verbauten Komponenten mit Bildern gezeigt.
 <br> Der Arduino ist der Kopf des Gerätes: </br>
 ![Arduino](Bilder/Arduino.JPEG)
-Display:
+Auf dem Display wird der aktuelle Status des Gerätes angezeigt. Dies kann "Landebereit", "am Manövrieren" oder "am Laden" sein. 
 ![Display](Bilder/Display.JPEG)
-Platine für LEDs:
+Auf der Platine für die LEDs werden Widerstände mit den plus-Kabeln (gelb) verbunden. Diese enden bei den LEDs. Die minus-Kabel (weiss) münden wieder im GND der Platine.
 ![LEDs](Bilder/LEDs.JPEG)
-Lötplatine:
+Auf der Lötplatine wird nahezu alle Hardware vereint, hier wird nämlich der Plus- / Minuspol gesammelt:
 ![Lötplatine](Bilder/Lötplatine.JPEG)
-Motor driver:
+Der Motor driver wird verwendet, um die Linearmotoren zu koordinieren:
 ![Motor_driver](Bilder/Motor_driver.JPEG)
-Poti:
+Mit dem Poti können die LEDs ein- / ausgeschalten werden:
 ![Poti](Bilder/Poti.JPEG)
 Schalter:
 ![Schalter](Bilder/Schalter.JPEG)
-Transformator:
+Ein Transformator wird verwendet, da die Linearantriebe 6V benötigen:
 ![Transformator](Bilder/Transformator.JPEG)
 Ultraschallsensor:
 ![Ultraschallsensor](Bilder/Ultraschallsensor.JPEG)
