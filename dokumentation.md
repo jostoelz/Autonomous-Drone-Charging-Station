@@ -64,26 +64,28 @@ In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. Der wir
 Die Hardware an der Landeplattform wird im nächsten Bild illustriert. 
 ![Hardware_Landeplattform](Bilder/Hardware_Landeplattform.jpg)
 Im folgenden werden die wichtigsten verbauten Komponenten mit Bildern gezeigt.
-<br> Der Arduino ist der Kopf des Gerätes: </br>
+<br> Der Arduino ist der Kopf des Gerätes. Er koordiniert und sammelt alle Befehle. </br>
 ![Arduino](Bilder/Arduino.JPEG)
 Auf dem Display wird der aktuelle Status des Gerätes angezeigt. Dies kann "Landebereit", "am Manövrieren" oder "am Laden" sein. 
 ![Display](Bilder/Display.JPEG)
-Auf der Platine für die LEDs werden Widerstände mit den plus-Kabeln (gelb) verbunden. Diese enden bei den LEDs. Die minus-Kabel (weiss) münden wieder im GND der Platine.
+Auf der Platine für die LEDs werden Widerstände mit den plus-Kabeln (gelb) verbunden. Diese enden bei den LEDs. Der Minuspol der LEDs mündet wieder im GND der Platine.
 ![LEDs](Bilder/LEDs.JPEG)
 Auf der Lötplatine wird nahezu alle Hardware vereint, hier wird nämlich der Plus- / Minuspol gesammelt:
 ![Lötplatine](Bilder/Lötplatine.JPEG)
 Der Motor driver wird verwendet, um die Linearmotoren zu koordinieren:
 ![Motor_driver](Bilder/Motor_driver.JPEG)
-Mit dem Poti können die LEDs ein- / ausgeschalten werden:
+Mit dem Poti kann ein variabler Widerstand eingestellt werden. Dies wird benutzt, um später die LEDs ein- / ausschalten zu können.
 ![Poti](Bilder/Poti.JPEG)
-Schalter:
+Ein Schalter wird verwendet, um entweder "HIGH" oder "LOW" an den digitalen Pin zu senden. So kann entschieden werden, ob das Gerät an oder aus sein soll.
 ![Schalter](Bilder/Schalter.JPEG)
-Ein Transformator wird verwendet, da die Linearantriebe 6V benötigen:
+Ein Transformator wird verwendet, da die Linearantriebe 6V benötigen, der Arduino aber nur 5V liefert.
 ![Transformator](Bilder/Transformator.JPEG)
-Ultraschallsensor:
+Die Ultraschallsensoren messen den Abstand zwischen zwei Objekten. Dies passiert, indem sie die Zeit messen, wie lange das Echo braucht, um zurückzukehren.
 ![Ultraschallsensor](Bilder/Ultraschallsensor.JPEG)
-wireless charging Sender:
+Der wireless charging Sender Plus-Pol wird mit einem Pin verbunden, um selbst entscheiden zu können, wann geladen werden soll.
 ![wireless_charging](Bilder/wireless_charging.JPEG)
+Die Linearantriebe können mithilfe des Motor drivers beliebig gesteuert werden.
+![Linearantriebe](Bilder/IMG_0717.JPEG)
 ## Beschreibung der Software
 Die Software ist so struktruiert, dass (sofern das Gerät angeschalten ist) die Ultraschallsensoren ständig den Abstand messen. Wenn sie dann ein Objekt näher als überlicherweise erkennen, werden die Motoren angeschalten. Anschliessend gibt es je zwei Durchgänge, während denen nacheinander beide Linearantriebe sich vollständig ausfahren. Es werden zwei Durchgänge durchgeführt, um sicherzustellen, dass die Drohne sich wirklich genau in der richtigen Position befindet. Wenn das Manöver abgeschlossen ist, wird der Pin für das wireless charging mit Strom beliefert. Wenn die Drohne wieder weggeflogen ist (wird durch den gemessenen Abstand der Ultraschallsensoren überprüft), wird der Strombetrieb für das wireless charging wieder beendet.
 ## Benützung
@@ -91,10 +93,11 @@ Die Funktionalität des Gerätes kann man ohne Drohne nur eingeschränkt überpr
 ## Demonstration
 Ich habe ein <a href="https://kantonsschuleromanshorn-my.sharepoint.com/:v:/g/personal/jostoelz_ksr_ch/EYghmAxh7fZNp1EXa3LVJkMBQi_qL3hC4DV3Lf5EdQMKvw?e=Lkv3ng ">Video</a> aufgenommen, welches die Ladestation in Aktion demonstriert. Um nachzuweisen, dass tatsächlich die Drohne geladen wird, biete ich gerne an, dies auch nach Abgabe des Projektes direkt an der Drohne zu zeigen. Es ist leider nicht möglich, dies auf einem Video festzuhalten. Ebenso wird im Video der An- / Ausschalter, das Display, der Poti und die LEDs nicht genauer demonstriert.
 # Entwicklung
+Zuerst habe ich mir verschiedene Lösungsansätze für eine charging Station für Drohnen überlegt (siehe unten Skizze). Als ich mich für eine entschieden habe, habe ich ich folgende die Station wie folgt visualiesiert: 
+![Visualisierung:Landeplattform](Bilder/Visualisierung_Landeplattform.png)
 Danach habe ich die Ausmessungen für das Gehäusse vorgenommen. Die folgende Skizze zeigen die Ergebnisse:
-
-![Skizze_Gehäuse](Skizze_Gehäuse.jpg)
-
+![Skizze_Gehäuse](Bilder/Skizze_Gehäuse.jpg)
+Das
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
 Als das Projekt startete, ging es zuerst an die Ideenfindung und die anschliessende Überlegung, wie man diese Idee umsetzen möchte. Dies war aber bei mir eine mühsame Angelegenheit, da es online keine Tutorials gibt, wie man eine selsbtändige DIJ Ladestation für Drohnen baut. Im speziellen war es schwierig herauszufinden, wie man die Drohne in die richtige Position bringt und wie man sie auflädt (per Kabel oder mit wireless charging). Einiger meiner Überlegungen dazu habe ich mir skizziert: 
