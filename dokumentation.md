@@ -61,8 +61,9 @@ In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. Der wir
 
 ![Hardware_Drohne](Bilder/Hardware_Drohne.jpg)
 
-Die Hardware an der Landeplattform wird im nächsten Bild illustriert.
+Die Hardware an der Landeplattform wird im nächsten Bild illustriert. 
 ![Hardware_Landeplattform](Bilder/Hardware_Landeplattform.jpg)
+
 ## Beschreibung der Software
 Die Software ist so struktruiert, dass (sofern das Gerät angeschalten ist) die Ultraschallsensoren ständig den Abstand messen. Wenn sie dann ein Objekt näher als überlicherweise erkennen, werden die Motoren angeschalten. Anschliessend gibt es je zwei Durchgänge, während denen nacheinander beide Linearantriebe sich vollständig ausfahren. Es werden zwei Durchgänge durchgeführt, um sicherzustellen, dass die Drohne sich wirklich genau in der richtigen Position befindet. Wenn das Manöver abgeschlossen ist, wird der Pin für das wireless charging mit Strom beliefert. Wenn die Drohne wieder weggeflogen ist (wird durch den gemessenen Abstand der Ultraschallsensoren überprüft), wird der Strombetrieb für das wireless charging wieder beendet.
 ## Benützung
@@ -72,7 +73,7 @@ Ich habe ein <a href="https://kantonsschuleromanshorn-my.sharepoint.com/:v:/g/pe
 # Entwicklung
 Danach habe ich die Ausmessungen für das Gehäusse vorgenommen. Die folgende Skizze zeigen die Ergebnisse:
 
-![Skizze Gehäuse](Skizze_Gehäuse.jpg)
+![Skizze_Gehäuse](Skizze_Gehäuse.jpg)
 
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
