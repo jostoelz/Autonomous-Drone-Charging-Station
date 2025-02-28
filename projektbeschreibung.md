@@ -65,9 +65,12 @@ Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei S
 </table>
 
 # Skizze 
-![Hardware an der Landeplattform](Bilder/Hardware_Landeplattform.jpg)
+Hardware an der Landeplattform:
+![Hardware an der Landeplattform](Bilder/Hardware_Landeplattform.png)
+Hardware an der Drohne:
 ![Hardware an der Drohne](Bilder/Hardware_Drohne.jpg)
-![Visualisierung Landeplattform](Bilder/Visualisierung_Landeplattform.jpg)
+Visualisierung der Landeplattform:
+![Visualisierung Landeplattform](Bilder/Visualisierung_Landeplattform.png)
 
 # Kostenabschätzung
 <table>
