@@ -3,7 +3,7 @@ In diesem Projekt baue ich eine automatische Ladevorrichtung für Drohnen. Sobal
 # Projekt im Detail
 Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei Seiten über Wände, an denen zwei Ultraschallsensoren angebracht sind. An den anderen beiden Seiten ist jeweils ein Linearantrieb mit einem Schieber angebracht. Sobald die Ultraschallsensoren eine Drohne auf der Landeplattform erfassen, bewegen die Linearantriebe die Drohne so weit in die Ecke, bis sie sich in der richtigen Position befindet. Unterhalb der Landeplattform ist ein wireless charging Sender montiert, während sich unterhalb der Drohne der entsprechende wireless charging Empfänger befindet. Sobald die Ultraschallsesonren erkennen, dass sich die Drohne in der Ecke befindet, fließt Strom von einem Netzteil zum wireless charging Sender. Der Empfänger an der Drohne wandelt die Wechselspannung in Gleichstrom um, der dann in den Akku der Drohne fließt, der über ein Kabel mit dem wireless charging Empfänger verbunden ist. Sobald der Ladevorgang abgeschlossen ist, kann die Drohne wieder abheben.
 ## Welche Features wurden umgesetzt?
-Nebendessen, dass die Drohne in der Lage ist, auf einer Plattform zu landen, die Linearantriebe die Drohne in die richtige Position bewewegen können, sie über wireless charging selbständig aufgeladen und anschliessend wieder abheben kann, ist die Station mit LEDs ausgestattet, die den Landeplatz bei Dunkelheit beleuchten. So kann der Pilot die Drohne auch nachts oder bei schlechten Sichtverhältnissen sicher landen. Fernerhin zeichnet sich die Ladestation damit aus, dass sie dauerhaft geschlossen ist, um sich gegen Niederschlag zu schützen. Aber auch der robuste Aufbau macht die Handhabung mit der Station flexibel, so dass die Station variabel aufstellbar ist.
+Nebendessen, dass die Drohne in der Lage ist, auf einer Plattform zu landen, die Linearantriebe die Drohne in die richtige Position bewewegen können, sie über wireless charging selbständig aufgeladen und anschliessend wieder abheben kann, ist die Station mit LEDs ausgestattet, die den Landeplatz bei Dunkelheit beleuchten und mit einem Poti an- / ausgeschaltet werden können. So kann der Pilot die Drohne auch nachts oder bei schlechten Sichtverhältnissen sicher landen. Fernerhin zeichnet sich die Ladestation damit aus, dass sie dauerhaft geschlossen ist, um sich gegen Niederschlag zu schützen. Aber auch der robuste Aufbau macht die Handhabung mit der Station flexibel, so dass die Station variabel aufstellbar ist. Des Weiteren wurde ein Display verbaut, das den aktuellen Status anzeigt: landebereit, am Manövrieren oder am Laden. Ein Knopf bietet eine flexible Benutzung der Station.  
 ## Beschreibung der Hardware
 Die verwendeten elektronischen Komponenten werden in der folgenden Tabelle aufgelistet.
 <table>
@@ -61,7 +61,7 @@ In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. Der wir
 
 ![Hardware_Drohne](Bilder/Hardware_Drohne.jpg)
 
-Die Hardware an der Landeplattform wird im nächsten Bild illustriert. 
+Die Hardware an der Landeplattform wird im nächsten Bild illustriert. Dabei darf nicht vergessen werden, dass nicht wie im Bild eine LED verbaut wurde, sondern 27. 
 ![Hardware_Landeplattform](Bilder/Hardware_Landeplattform.jpg)
 Im folgenden werden die wichtigsten verbauten Komponenten mit Bildern gezeigt.
 <br> Der Arduino ist der Kopf des Gerätes. Er koordiniert und sammelt alle Befehle. </br>
