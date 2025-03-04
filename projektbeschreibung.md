@@ -123,4 +123,4 @@ Visualisierung der Landeplattform:
     </tr>
   </tbody>
 </table>
-Bemerkung: Ich brauche zwei Linearantriebe und zwei Ultraschallsensoren.
+Bemerkung: Ich brauche zwei Linearantriebe und zwei Ultraschallsensoren. Des Weiteren wurden Widerstände, LEDs, ein Display, ein Poti und ein Schalter nicht erwähnt.
