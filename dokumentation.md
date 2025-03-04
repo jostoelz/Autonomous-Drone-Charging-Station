@@ -82,9 +82,9 @@ Ein Transformator wird verwendet, da die Linearantriebe 6V benötigen, der Ardui
 ![Transformator](Bilder/Transformator.JPEG)
 Die Ultraschallsensoren messen den Abstand zwischen zwei Objekten. Dies passiert, indem sie die Zeit messen, wie lange das Echo braucht, um zurückzukehren.
 ![Ultraschallsensor](Bilder/Ultraschallsensor.JPEG)
-Der wireless charging Sender Plus-Pol wird mit einem Pin verbunden, um selbst entscheiden zu können, wann geladen werden soll.
+Der wireless charging Sender Plus-Pol wird mit einem Pin verbunden, um selbst entscheiden zu können, wann geladen werden soll und wann nicht.
 ![wireless_charging](Bilder/wireless_charging.JPEG)
-Die Linearantriebe können mithilfe des Motor drivers beliebig gesteuert werden.
+Die Linearantriebe können mithilfe des Motor drivers beliebig nach vorne und nach hinten gesteuert werden. An die Linearantriebe wurde je ein Schieber aus Holz angeklebt. 
 ![Linearantriebe](Bilder/IMG_0717.JPEG)
 ## Beschreibung der Software
 Die Software ist so struktruiert, dass (sofern das Gerät angeschalten ist) die Ultraschallsensoren ständig den Abstand messen. Wenn sie dann ein Objekt näher als überlicherweise erkennen, werden die Motoren angeschalten. Anschliessend gibt es je zwei Durchgänge, während denen nacheinander beide Linearantriebe sich vollständig ausfahren. Es werden zwei Durchgänge durchgeführt, um sicherzustellen, dass die Drohne sich wirklich genau in der richtigen Position befindet. Wenn das Manöver abgeschlossen ist, wird der Pin für das wireless charging mit Strom beliefert. Wenn die Drohne wieder weggeflogen ist (wird durch den gemessenen Abstand der Ultraschallsensoren überprüft), wird der Strombetrieb für das wireless charging wieder beendet.
@@ -93,11 +93,12 @@ Die Funktionalität des Gerätes kann man ohne Drohne nur eingeschränkt überpr
 ## Demonstration
 Ich habe ein <a href="https://kantonsschuleromanshorn-my.sharepoint.com/:v:/g/personal/jostoelz_ksr_ch/EYghmAxh7fZNp1EXa3LVJkMBQi_qL3hC4DV3Lf5EdQMKvw?e=Lkv3ng ">Video</a> aufgenommen, welches die Ladestation in Aktion demonstriert. Um nachzuweisen, dass tatsächlich die Drohne geladen wird, biete ich gerne an, dies auch nach Abgabe des Projektes direkt an der Drohne zu zeigen. Es ist leider nicht möglich, dies auf einem Video festzuhalten. Ebenso wird im Video der An- / Ausschalter, das Display, der Poti und die LEDs nicht genauer demonstriert.
 # Entwicklung
-Zuerst habe ich mir verschiedene Lösungsansätze für eine charging Station für Drohnen überlegt (siehe unten Skizze). Als ich mich für eine entschieden habe, habe ich ich folgende die Station wie folgt visualiesiert: 
+Zuerst habe ich mir verschiedene Lösungsansätze für eine charging Station für Drohnen überlegt (siehe unten Skizze). Als ich mich für eine entschieden habe, habe ich mir die Station wie folgt vorgestellt: 
 ![Visualisierung:Landeplattform](Bilder/Visualisierung_Landeplattform.png)
+
 Danach habe ich die Ausmessungen für das Gehäusse vorgenommen. Die folgende Skizze zeigen die Ergebnisse:
 ![Skizze_Gehäuse](Bilder/Skizze_Gehäuse.jpg)
-Das
+Bevor ich 
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
 Als das Projekt startete, ging es zuerst an die Ideenfindung und die anschliessende Überlegung, wie man diese Idee umsetzen möchte. Dies war aber bei mir eine mühsame Angelegenheit, da es online keine Tutorials gibt, wie man eine selsbtändige DIJ Ladestation für Drohnen baut. Im speziellen war es schwierig herauszufinden, wie man die Drohne in die richtige Position bringt und wie man sie auflädt (per Kabel oder mit wireless charging). Einiger meiner Überlegungen dazu habe ich mir skizziert: 
