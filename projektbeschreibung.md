@@ -59,7 +59,7 @@ Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei S
     </tr>
     <tr>
       <td>Abgabe Projekt</td>
-      <td>21.02.25</td>
+      <td>28.02.25</td>
     </tr>
   </tbody>
 </table>
