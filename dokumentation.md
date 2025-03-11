@@ -3,7 +3,7 @@ In diesem Projekt baue ich eine automatische Ladevorrichtung für Drohnen. Sobal
 # Projekt im Detail
 Der Pilot landet auf einer Landeplattform. Die Landeplattform verfügt an zwei Seiten über Wände, an denen zwei Ultraschallsensoren angebracht sind. An den anderen beiden Seiten ist jeweils ein Linearantrieb mit einem Schieber angebracht. Sobald die Ultraschallsensoren eine Drohne auf der Landeplattform erfassen, bewegen die Linearantriebe die Drohne so weit in die Ecke, bis sie sich in der richtigen Position befindet. Unterhalb der Landeplattform ist ein wireless charging Sender montiert, während sich unterhalb der Drohne der entsprechende wireless charging Empfänger befindet. Sobald die Ultraschallsesonren erkennen, dass sich die Drohne in der Ecke befindet, fließt Strom von einem Netzteil zum wireless charging Sender. Der Empfänger an der Drohne wandelt die Wechselspannung in Gleichstrom um, der dann in den Akku der Drohne fließt, der über ein Kabel mit dem wireless charging Empfänger verbunden ist. Sobald der Ladevorgang abgeschlossen ist, kann die Drohne wieder abheben.
 ## Welche Features wurden umgesetzt?
-Nebendessen, dass die Drohne in der Lage ist, auf einer Plattform zu landen, die Linearantriebe die Drohne in die richtige Position bewewegen können, sie über wireless charging selbständig aufgeladen und anschliessend wieder abheben kann, ist die Station mit LEDs ausgestattet, die den Landeplatz bei Dunkelheit beleuchten und mit einem Poti an- / ausgeschaltet werden können. So kann der Pilot die Drohne auch nachts oder bei schlechten Sichtverhältnissen sicher landen. Fernerhin zeichnet sich die Ladestation damit aus, dass sie dauerhaft geschlossen ist, um sich gegen Niederschlag zu schützen. Aber auch der robuste Aufbau macht die Handhabung mit der Station flexibel, so dass die Station variabel aufstellbar ist. Des Weiteren wurde ein Display verbaut, das den aktuellen Status anzeigt: landebereit, am Manövrieren oder am Laden. Ein Knopf bietet eine flexible Benutzung der Station.  
+Nebendessen, dass die Drohne in der Lage ist, auf einer Plattform zu landen, die Linearantriebe die Drohne in die richtige Position bewewegen können, sie über wireless charging selbständig aufgeladen und anschliessend wieder abheben kann, ist die Station mit LEDs ausgestattet, die den Landeplatz bei Dunkelheit beleuchten und mit einem Poti an- / ausgeschaltet werden können. So kann der Pilot die Drohne auch nachts oder bei schlechten Sichtverhältnissen sicher landen. Fernerhin zeichnet sich die Ladestation damit aus, dass sie dauerhaft geschlossen ist, um sich gegen Niederschlag zu schützen. Aber auch der robuste Aufbau macht die Handhabung mit der Station flexibel, so dass die Station variabel aufstellbar ist. Des Weiteren wurde ein Display verbaut, das den aktuellen Status anzeigt: landebereit, am Manövrieren oder am Laden. Ein Knopf bietet eine flexible Benutzung der Station, indem sie an- / ausgeschaltet werden kann. Ausserdem muss die Station nicht mit einem Computer verbunden werden, um zu funktionieren, sondern kann einfach mit einem Netzteil an eine Steckdose angeschlossen werden. Dies ermöglicht weitere Flexibilität.
 ## Beschreibung der Hardware
 Die verwendeten elektronischen Komponenten werden in der folgenden Tabelle aufgelistet.
 <table>
@@ -56,35 +56,36 @@ Die verwendeten elektronischen Komponenten werden in der folgenden Tabelle aufge
     </tr>
   </tbody>
 </table>
-Eine wichtige Bemerkung ist, dass ich zwei Ultraschallsensoren und zwei Linearantriebe verbaut habe. Dazu kommen ebenfalls noch günstige Standard-Komponenten wie Poti, Display, Slide Switch und Widerstände.
-In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. Der wireless charging Empfänger wurde an der Unterseite der Drohne mit Klebeband montiert. An den Empfänger wurde ein Kabel mit offenem Ende zu USB C gelötet, das schlussendlich in die Drohne gesteckt wurde.
+Eine wichtige Bemerkung ist, dass ich zwei Ultraschallsensoren und zwei Linearantriebe verbaut habe. Dazu kommen ebenfalls noch günstige Standard-Komponenten wie ein Poti, ein Display, ein Slide Switch, LEDs und Widerstände. <br>
+<br>
+In der folgenden Darstellung wird die Hardware an der Drohne aufgezeigt. Der wireless charging Empfänger wurde an der Unterseite der Drohne mit Klebeband montiert. An den Empfänger wurde ein Kabel mit offenem Ende zu USB C gelötet. Das USB C-Ende wurde schlussendlich in die Drohne gesteckt.
 
 ![Hardware_Drohne](Bilder/Hardware_Drohne.jpg)
 
 Die Hardware an der Landeplattform wird im nächsten Bild illustriert. Dabei darf nicht vergessen werden, dass nicht wie im Bild eine LED verbaut wurde, sondern 27. 
 ![Hardware_Landeplattform](Bilder/Hardware_Landeplattform.jpg)
-Im folgenden werden die wichtigsten verbauten Komponenten mit Bildern gezeigt.
-<br> Der Arduino ist der Kopf des Gerätes. Er koordiniert und sammelt alle Befehle. </br>
+Im folgenden Abschnitt werden die wichtigsten verbauten Komponenten mit Bildern gezeigt. <br>
+<br> Der Arduino ist der Kopf des Gerätes. Er koordiniert und sammelt alle Befehle. Auf ihm ist noch ein Ethernet-Shield montiert, das ich jedoch nicht mehr zum gewünschten Funktionieren bringen konnte. </br>
 ![Arduino](Bilder/Arduino.JPEG)
 Auf dem Display wird der aktuelle Status des Gerätes angezeigt. Dies kann "Landebereit", "am Manövrieren" oder "am Laden" sein. 
 ![Display](Bilder/Display.JPEG)
 Auf der Platine für die LEDs werden Widerstände mit den plus-Kabeln (gelb) verbunden. Diese enden bei den LEDs. Der Minuspol der LEDs mündet wieder im GND der Platine.
 ![LEDs](Bilder/LEDs.JPEG)
-Auf der Lötplatine wird nahezu alle Hardware vereint, hier wird nämlich der Plus- / Minuspol gesammelt:
+Auf der Lötplatine wird nahezu alle Hardware vereint. Hier wird nämlich der Plus- und Minuspol gesammelt:
 ![Lötplatine](Bilder/Lötplatine.JPEG)
 Der Motor driver wird verwendet, um die Linearmotoren zu koordinieren:
 ![Motor_driver](Bilder/Motor_driver.JPEG)
-Mit dem Poti kann ein variabler Widerstand eingestellt werden. Dies wird benutzt, um später die LEDs ein- / ausschalten zu können.
+Mit dem Poti kann ein variabler Widerstand eingestellt werden. Dies wird benutzt, um später die LEDs mit dem Drehen des Potis ein- / ausschalten zu können.
 ![Poti](Bilder/Poti.JPEG)
 Ein Schalter wird verwendet, um entweder "HIGH" oder "LOW" an den digitalen Pin zu senden. So kann entschieden werden, ob das Gerät an oder aus sein soll.
 ![Schalter](Bilder/Schalter.JPEG)
-Ein Transformator wird verwendet, da die Linearantriebe 6V benötigen, der Arduino aber nur 5V liefert.
+Ein Step-Up Spannungsregler wird verwendet, da die Linearantriebe 6V benötigen, der Arduino aber nur 5V liefert.
 ![Transformator](Bilder/Transformator.JPEG)
-Die Ultraschallsensoren messen den Abstand zwischen zwei Objekten. Dies passiert, indem sie die Zeit messen, wie lange das Echo braucht, um zurückzukehren.
+Die Ultraschallsensoren messen den Abstand zwischen zwei Objekten. Dies passiert, indem sie die Zeit messen, wie lange das Echo braucht, um zurückzukehren. Die Ultraschallsensoren wurden an kleine Wände geklebt, die später helfen, dass sich die Drohne nicht weiter als die gewünschte Ecke bewegt.
 ![Ultraschallsensor](Bilder/Ultraschallsensor.JPEG)
 Der wireless charging Sender Plus-Pol wird mit einem Pin verbunden, um selbst entscheiden zu können, wann geladen werden soll und wann nicht.
 ![wireless_charging](Bilder/wireless_charging.JPEG)
-Die Linearantriebe können mithilfe des Motor drivers beliebig nach vorne und nach hinten gesteuert werden. An die Linearantriebe wurde je ein Schieber aus Holz angeklebt. 
+Die Linearantriebe können mithilfe des Motor drivers beliebig nach vorne und nach hinten gesteuert werden. An die Linearantriebe wurde je ein Schieber aus Holz angeklebt, sodass die Drohne über die gesamte Breite der Station manövriert werden kann.
 ![Linearantriebe](Bilder/IMG_0717.JPEG)
 ## Beschreibung der Software
 Die Software ist so struktruiert, dass (sofern das Gerät angeschalten ist) die Ultraschallsensoren ständig den Abstand messen. Wenn sie dann ein Objekt näher als überlicherweise erkennen, werden die Motoren angeschalten. Anschliessend gibt es je zwei Durchgänge, während denen nacheinander beide Linearantriebe sich vollständig ausfahren. Es werden zwei Durchgänge durchgeführt, um sicherzustellen, dass die Drohne sich wirklich genau in der richtigen Position befindet. Wenn das Manöver abgeschlossen ist, wird der Pin für das wireless charging mit Strom beliefert. Wenn die Drohne wieder weggeflogen ist (wird durch den gemessenen Abstand der Ultraschallsensoren überprüft), wird der Strombetrieb für das wireless charging wieder beendet.
@@ -96,9 +97,10 @@ Ich habe ein <a href="https://kantonsschuleromanshorn-my.sharepoint.com/:v:/g/pe
 Zuerst habe ich mir verschiedene Lösungsansätze für eine charging Station für Drohnen überlegt (siehe unten Skizze). Als ich mich für eine entschieden habe, habe ich mir die Station wie folgt vorgestellt: 
 ![Visualisierung:Landeplattform](Bilder/Visualisierung_Landeplattform.png)
 
-Danach habe ich die Ausmessungen für das Gehäusse vorgenommen. Die folgende Skizze zeigen die Ergebnisse:
+Danach habe ich die Ausmessungen für das Gehäusse vorgenommen. Dabei musste ich viele Messungen durchführen und die Landungen der Drohne mehrfach simulieren, um sicherzugehen, dass die Dimensionen zusammenpassen. Die folgende Skizze zeigen die Ergebnisse:
 ![Skizze_Gehäuse](Bilder/Skizze_Gehäuse.jpg)
-Bevor ich 
+Bevor ich alle Komponenten zusammengefügt habe, musste ich zuerst die einzelnen Bestandteile testen. Die nächsten Bilder zeigen Ausschnitte davon: <br> 
+
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
 Als das Projekt startete, ging es zuerst an die Ideenfindung und die anschliessende Überlegung, wie man diese Idee umsetzen möchte. Dies war aber bei mir eine mühsame Angelegenheit, da es online keine Tutorials gibt, wie man eine selsbtändige DIJ Ladestation für Drohnen baut. Im speziellen war es schwierig herauszufinden, wie man die Drohne in die richtige Position bringt und wie man sie auflädt (per Kabel oder mit wireless charging). Einiger meiner Überlegungen dazu habe ich mir skizziert: 
@@ -107,7 +109,7 @@ Eine andere Schwierigkeit war es, die passenden Teilchen herauszusuchen, denn au
 Im Gegenzug dazu war dann die Zusammensetzung der verschiedenen elektronischen Komponenten unkompliziert. Widerrum der Bau der Station hat viele Ausmessungen benötigt und Zeit beansprucht. Es musste sich genau überlegt werden, wie und vor allem auch in welcher Reihenfolge man was herstellt und befestigt. Es musste vor allem genau gearbeitet werden, sodass die wireless charging Komponenten exakt übereinander ausgerichtet sind, wie im folgenden Bild illustriert.
 ![wireless charging Sender & Empfänger](Bilder/Wireless_charging_Sender_Empfänger.png)
 ## Was würde ich anders machen?
-Nächstes Mal würde ich mich mehr an meinen Zeitplan halten und zuerst die wichtigsten Ziele erreichen, bevor ich mich den Erweiterungen widme. Ich habe mich leider über mehrere Wochen dem optionalen Feature des Zugriffs der externe Wettervorhersagen über eine API gekümmert. Damit wollte ich dem Pilot eine Empfehlung (je nach Wind & Niederschlag) über das Fliegen geben. Jedoch ist dieses Feature immer an einem bestimmen Punkt gescheitert. Ich wollte nicht aufgeben und so schob ich die eigentlich wichtigen Dinge, wie die Herstellung der Box, immer weiter heraus. Schlussendlich bin ich in einen Stress gekommen und konnte deshalb gewünschte Änderungen aus zeitlichen Gründen nicht mehr umsetzen.
+Nächstes Mal würde ich mich mehr an meinen Zeitplan halten und zuerst die wichtigsten Ziele erreichen, bevor ich mich den Erweiterungen widme. Ich habe mich leider über mehrere Wochen dem optionalen Feature des Zugriffs der externe Wettervorhersagen über eine API gekümmert. Damit wollte ich dem Pilot eine Empfehlung (je nach Wind & Niederschlag) über das Fliegen geben. Jedoch ist dieses Feature immer an einem bestimmen Punkt gescheitert. Ich wollte nicht aufgeben und so schob ich die eigentlich wichtigen Aufgaben, wie die Herstellung der Box, immer weiter heraus. Schlussendlich bin ich in einen Stress gekommen und konnte deshalb gewünschte Änderungen aus zeitlichen Gründen nicht mehr umsetzen.
 ## Erweiterungen
 * Eine bedeutende Verbesserung der Ladestation wäre, dass das Aufladen der Drohne nicht mehr (wie bis anhin) nur funktioniert, wenn die Drohne in einer speziellen Ausrichtung landet (mit der Kamera nach vorne und seitlich zur kurzen Seite der Station), sondern variabel landen kann. Dafür würde man aber zwei Linearantriebe mehr benötigen. Dies war aber im Rahmen des Budgets dieses Projektes nicht möglich.
 * Eine andere Erweritung wäre, dass die Box mit Wettersensoren ausgestattet ist und dem Piloten je nach Wetterbedingungen Empfehlungen abgibt, ob er fliegen sollte oder nicht.
