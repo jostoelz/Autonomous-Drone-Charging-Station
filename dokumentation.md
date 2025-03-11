@@ -102,7 +102,10 @@ Danach habe ich die Ausmessungen für das Gehäusse vorgenommen. Dabei musste ic
 Bevor ich alle Komponenten zusammengefügt habe, musste ich zuerst die einzelnen Bestandteile testen. Die nächsten Bilder zeigen Ausschnitte davon: <br> 
 In der folgenden Abbildung habe ich die Funktionstüchtigkeit des wireless charging anhand einer LED überprüft:
 ![Skizze_Gehäuse](Bilder/Wireless_charging.JPEG)
-Ebenso habe ich 
+Ebenso habe ich die Linearantriebe getestet:
+![Skizze_Gehäuse](Bilder/Linearantriebe.JPEG)
+Aber auch die Ultraschallsensoren, der Poti und die LEDs mussten ausprobiert werden. Das folgende Bild zeigt dies (wobei hier noch das wireless charging implementiert wurde).
+![Skizze_Gehäuse](Bilder/Linearantriebe.JPEG)
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
 Als das Projekt startete, ging es zuerst an die Ideenfindung und die anschliessende Überlegung, wie man diese Idee umsetzen möchte. Dies war aber bei mir eine mühsame Angelegenheit, da es online keine Tutorials gibt, wie man eine selsbtändige DIJ Ladestation für Drohnen baut. Im speziellen war es schwierig herauszufinden, wie man die Drohne in die richtige Position bringt und wie man sie auflädt (per Kabel oder mit wireless charging). Einiger meiner Überlegungen dazu habe ich mir skizziert: 
