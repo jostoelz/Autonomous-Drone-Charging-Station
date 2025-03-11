@@ -104,8 +104,12 @@ In der folgenden Abbildung habe ich die Funktionstüchtigkeit des wireless charg
 ![Skizze_Gehäuse](Bilder/Wireless_charging.JPEG)
 Ebenso habe ich die Linearantriebe getestet:
 ![Skizze_Gehäuse](Bilder/Linearantriebe.JPEG)
-Aber auch die Ultraschallsensoren, der Poti und die LEDs mussten ausprobiert werden. Das folgende Bild zeigt dies (wobei hier noch das wireless charging implementiert wurde).
-![Skizze_Gehäuse](Bilder/Linearantriebe.JPEG)
+Aber auch die Ultraschallsensoren, der Poti und die LEDs mussten ausprobiert werden. Das folgende Bild zeigt dies (wobei hier noch das wireless charging dabei war).
+![Skizze_Gehäuse](Bilder/Poti_LEDs.JPEG)
+Da dann alle Komponenten auf dem Breadboard funktioniert haben, konnte ich sie in die Station übertragen und dort final integrieren.
+![Skizze_Gehäuse](Bilder/Übergang_Box.JPEG)
+Als dieser Prozess vorbei war, konnte man langsam erkennen, wie das Innere der Station aussieht. 
+![Skizze_Gehäuse](Bilder/Box_innen.JPEG)
 # Diskussion & Reflexion
 ## Was hat gut geklappt, was weniger?
 Als das Projekt startete, ging es zuerst an die Ideenfindung und die anschliessende Überlegung, wie man diese Idee umsetzen möchte. Dies war aber bei mir eine mühsame Angelegenheit, da es online keine Tutorials gibt, wie man eine selsbtändige DIJ Ladestation für Drohnen baut. Im speziellen war es schwierig herauszufinden, wie man die Drohne in die richtige Position bringt und wie man sie auflädt (per Kabel oder mit wireless charging). Einiger meiner Überlegungen dazu habe ich mir skizziert: 
