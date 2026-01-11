@@ -13,11 +13,13 @@ The station functions as a standalone, plug-and-play system that converts AC to 
 If you find this project useful for your research, please consider citing it:
 
 ```bibtex
-@software{Stoelzle2024,
-  author       = {St{\"o}lzle, Johannes},
-  title        = {Autonomous Drone Charging Station },
-  year         = 2025,
-  url          = {[https://github.com/jostoelz/Autonomous-Drone-Charging-Station)}
+@thesis{Stoelzle2026Development,
+  author      = {St{\"o}lzle, Johannes},
+  title       = {Development of an Autonomous Drone System for Wolf Perception, Deterrence, and Livestock Protection},
+  institution = {Kantonsschule Romanshorn},
+  year        = {2026},
+  type        = {Matura Thesis},
+  url         = {https://github.com/jostoelz/Autonomous-Drone-System-for-Wolf-Detection-Deterrence-and-Sheep-Protection}
 }
 ```
 
